@@ -54,9 +54,9 @@ document.getElementById("xg").innerHTML = accGravity.x;
 document.getElementById("yg").innerHTML = accGravity.y;
 document.getElementById("zg").innerHTML = accGravity.z;
 var rotationRate = event.rotationRate;
-document.getElementById("Ralpha").innerHTML = rotationRate.alpha;
-document.getElementById("Rbeta").innerHTML = rotationRate.beta;
-document.getElementById("Rgamma").innerHTML = rotationRate.gamma;
+document.getElementById("Ralpha").innerHTML = (rotationRate.alpha).toFixed(1);
+document.getElementById("Rbeta").innerHTML = rotationRate.beta.toFixed(1);
+document.getElementById("Rgamma").innerHTML = rotationRate.gamma.toFixed(1);
 }
 
 if (window.DeviceMotionEvent) {
