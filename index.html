@@ -53,8 +53,8 @@ var accGravity = event.accelerationIncludingGravity;
 document.getElementById("xg").innerHTML = accGravity.x;
 document.getElementById("yg").innerHTML = accGravity.y;
 document.getElementById("zg").innerHTML = accGravity.z;
-var rotationRate = event.rotationRate;
-document.getElementById("Ralpha").innerHTML = (rotationRate.alpha).toFixed(1);
+var rotationRate = event.rotationRate.toFixed(1);
+document.getElementById("Ralpha").innerHTML = rotationRate.alpha.toFixed(1);
 document.getElementById("Rbeta").innerHTML = rotationRate.beta.toFixed(1);
 document.getElementById("Rgamma").innerHTML = rotationRate.gamma.toFixed(1);
 }
