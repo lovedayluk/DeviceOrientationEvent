@@ -3,6 +3,8 @@
 <head>
 <title>Rotation</title>
 <meta charset="UTF-8" />
+<link href="st.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.js" type="text/javascript"> </script>
 </head>
 
 <body>
@@ -15,6 +17,7 @@
 <p>指北针指向：<span id="heading">0</span>度</p>
 <p>指北针精度：<span id="accuracy">0</span>度</p>
 <hr />
+<img alt="gintoki" src="bg.jpg"/>
 <!--
 <p>x轴加速度：<span id="x">0</span>米每二次方秒</p>
 <p>y轴加速度：<span id="y">0</span>米每二次方秒</p>
@@ -53,10 +56,10 @@ var accGravity = event.accelerationIncludingGravity;
 document.getElementById("xg").innerHTML = accGravity.x;
 document.getElementById("yg").innerHTML = accGravity.y;
 document.getElementById("zg").innerHTML = accGravity.z;
-var rotationRate = event.rotationRate.toFixed(1);
-document.getElementById("Ralpha").innerHTML = rotationRate.alpha.toFixed(1);
-document.getElementById("Rbeta").innerHTML = rotationRate.beta.toFixed(1);
-document.getElementById("Rgamma").innerHTML = rotationRate.gamma.toFixed(1);
+var rotationRate = event.rotationRate;
+document.getElementById("Ralpha").innerHTML = rotationRate.alpha;
+document.getElementById("Rbeta").innerHTML = rotationRate.beta;
+document.getElementById("Rgamma").innerHTML = rotationRate.gamma;
 }
 
 if (window.DeviceMotionEvent) {
